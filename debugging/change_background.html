@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Change Background</title>
+  <style>
+    body { font-family: sans-serif; margin: 2rem; }
+    button { padding: 0.6rem 1rem; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <button id="colorButton">Change background</button>
+
+  <script>
+    // ألوان بسيطة للتبديل بينها
+    const colors = ["#fef3c7", "#e0f2fe", "#dcfce7", "#fae8ff", "#ffe4e6", "#f3e8ff"];
+
+    function changeBackground() {
+      const next = colors[Math.floor(Math.random() * colors.length)];
+      document.body.style.backgroundColor = next; // خاصية camelCase صحيحة
+    }
+
+    // ربط الحدث بالزر ذي الـ id الصحيح
+    document.getElementById("colorButton").addEventListener("click", changeBackground);
+  </script>
+</body>
+</html>
